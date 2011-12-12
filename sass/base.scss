@@ -1,0 +1,16 @@
+@import "compass/reset";
+@import "960/grid";
+@import "font";
+@import "ie";
+@import "button";
+@import "topbar";
+@import "label";
+@import "dropdown";
+@import "form";
+
+a {text-decoration: none;}
+button, input[type="reset"], input[type="button"], input[type="submit"], input[type="file"] > input[type="button"] { &::-moz-focus-inner { border:none; } }
+article, aside, div, form, header, nav, section, ul{
+  &:after { clear: both; content: ""; display: block; height: 0; visibility: hidden; }
+}
+.container { @include grid-system(16); }

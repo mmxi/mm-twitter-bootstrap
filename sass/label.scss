@@ -1,0 +1,24 @@
+@import "compass/css3";
+span.label{
+  display: inline-block;
+  padding: 1px 3px 2px 3px;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+  @include border-radius(3px);
+  background: #BFBFBF;
+  &.success {
+    background: #46A546;
+  }
+  &.warning {
+    background: #F89406;
+  }
+  &.important {
+    background: #C43C35;
+  }
+  &.notice {
+    background: #62CFFC;
+  }
+}

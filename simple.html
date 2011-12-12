@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>simple</title>
+<!--[if lt IE 9]> <script src="javascripts/html5.js"></script> <![endif]-->
+<link rel="stylesheet" href="stylesheets/base.css" type="text/css" media="screen" charset="utf-8">
+<script type="text/javascript" src="javascripts/jquery.js" charset="utf-8"></script>
+<script type="text/javascript" src="javascripts/bootstrap-dropdown.js" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){ $('.topbar').dropdown(); 
+    if (jQuery.browser.msie === true) { jQuery('input,textarea').bind('focus', function() { $(this).addClass('ieFocus'); }).bind('blur', function() { $(this).removeClass('ieFocus'); });}
+  });
+</script>
+<!--[if IE 6]>
+  <script type="text/javascript" src="javascripts/jquery.ie6hover.js" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function(){$.ie6hover(true);});
+  </script>
+<![endif]-->
+</head>
+<body>
+<div class="topbar" data-dropdown="dropdown">
+  <div class="fill">
+    <div class="container">
+      <a class="logo" href="#">绍兴街</a>
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li class="active"><a href="#">社区</a></li>
+      </ul>
+      <ul class="nav secondary-nav">
+        <li><a href="#">首页</a></li>
+        <li class="active"><a href="#">社区</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">下拉菜单<b></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">帐号资料</a></li>
+            <li class="divider"></li>
+            <li><a href="#">退出</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<p><span class="label">New!</span></p>
+<p><span class="label success">New!</span></p>
+<p><span class="label warning">New!</span></p>
+<p><span class="label important">New!</span></p>
+<p><span class="label notice">New!</span></p>
+<div class="actions">
+  <p>
+    <a href="#" class="btn primary_2">登录</a>
+    <br />
+  </p>
+  <a href="#" class="btn primary_4">提交注册</a>
+  <input type="submit" class="btn primary_2" value="发布" />
+  <a href="#" class="btn btn_2">返回</a>
+  <a href="#" class="btn btn_4">返回首页</a>
+  <a href="#" class="btn info_2">返回</a>
+  <a href="#" class="btn info_4">返回首页</a>
+  <a href="#" class="btn success_2">返回</a>
+  <a href="#" class="btn success_4">返回首页</a>
+  <a href="#" class="btn danger_2">返回</a>
+  <a href="#" class="btn danger_4">返回首页</a>
+</div>
+
+<p>aaa</p>
+  <p>
+    <a href="#" class="btn primary_2">注册</a>
+    <br />
+  </p>
+<p>aaa</p>
+  <a href="#" class="btn primary_4">更新帖子</a>
+<p>aaa</p>
+  <form id="new_topic">
+    <input type="submit" class="btn submit" value="发布" />
+  </form>
+  <form id="new_user">
+    <input type="submit" class="btn submit" value="登录" />
+  </form>
+  <form id="new_register">
+    <input type="submit" class="btn submit" value="登录" />
+    <button type="submit" class="btn btn_2 submit">登录</button>
+  </form>
+<p>aaa</p>
+<h1>你还没有帐号</h1>
+<h2>你还没有帐号</h2>
+<h3>你还没有帐号</h3>
+<h4>你还没有帐号</h4>
+<h5>你还没有帐号</h5>
+<h6>你还没有帐号</h6>
+<p>aaa</p>
+
+<form novalidate="novalidate" method="post" id="new_user" enctype="multipart/form-data" class="simple_form new_user" action="/users" accept-charset="UTF-8">
+<div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="put" name="_method"><input type="hidden" value="sSVaqOyW/i8HkGwcy344rI2OM1tKFJvyfSlirsSO4Eo=" name="authenticity_token"></div>
+
+<div class="clearfix string required  error">
+  <label for="user_name" class="string required  "><abbr title="required">*</abbr> 用户名</label>
+  <div class="input">
+    <input type="text" value="" size="50" name="user[name]" id="user_name" class="string required ">
+    <span class="help-inline">不能为空字符</span>
+  </div>
+</div>
+
+<div class="clearfix string required  success">
+  <label for="user_name" class="string required  "><abbr title="required">*</abbr> 用户名</label>
+  <div class="input">
+    <input type="text" value="" size="50" name="user[name]" id="user_name" class="string required ">
+    <span class="help-inline">不能为空字符</span>
+  </div>
+</div>
+
+<div class="clearfix success string required">
+            <label><abbr title="required">*</abbr>只整合</label>
+            <div class="input">
+              <input type="text" size="30" name="successInput" id="successInput" class="string required">
+              <span class="help-inline">Success!</span>
+            </div>
+        </div>
+
+<div class="clearfix warning">
+            <label for="warningInput">Input with warning</label>
+            <div class="input">
+              <input type="text" size="30" name="warningInput" id="warningInput" class="">
+              <span class="help-inline">Ruh roh!</span>
+            </div>
+          </div>
+
+<fieldset>
+          <legend>Example form legend</legend>
+          <div class="clearfix">
+            <label id="optionsCheckboxes">List of options</label>
+            <div class="input">
+              <ul class="inputs-list">
+                <li>
+                  <label>
+                    <input type="checkbox" value="option1" name="optionsCheckboxes" class="input_checkbox">
+                    <span>Option one is this and that&mdash;be sure to include why it’s great</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="option2" name="optionsCheckboxes" class="input_checkbox">
+                    <span>Option two can also be checked and included in form results</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="option2" name="optionsCheckboxes" class="input_checkbox">
+                    <span>Option three can&mdash;yes, you guessed it&mdash;also be checked and included in form results. Let's make it super long so that everyone can see how it wraps, too.</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="disabled">
+                    <input type="checkbox" disabled="" value="option2" name="optionsCheckboxes" class="input_checkbox">
+                    <span>Option four cannot be checked as it is disabled.</span>
+                  </label>
+                </li>
+              </ul>
+              <span class="help-block">
+                <strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.
+              </span>
+            </div>
+          </div><!-- /clearfix -->
+          <div class="clearfix">
+            <label>Date range</label>
+            <div class="input">
+              <div class="inline-inputs">
+                <input type="text" value="May 1, 2011" class="small">
+                <input type="text" value="12:00am" class="mini">
+                to
+                <input type="text" value="May 8, 2011" class="small">
+                <input type="text" value="11:59pm" class="mini">
+                <span class="help-block">All times are shown as Pacific Standard Time (GMT -08:00).</span>
+              </div>
+            </div>
+          </div><!-- /clearfix -->
+          <div class="clearfix">
+            <label for="textarea">Textarea</label>
+            <div class="input">
+              <textarea rows="3" name="textarea2" id="textarea2" class="xxlarge"></textarea>
+              <span class="help-block">
+                Block of help text to describe the field above if need be.
+              </span>
+            </div>
+          </div><!-- /clearfix -->
+          <div class="clearfix">
+            <label id="optionsRadio">List of options</label>
+            <div class="input">
+              <ul class="inputs-list">
+                <li>
+                  <label>
+                    <input type="radio" value="option1" name="optionsRadios" checked="">
+                    <span>Option one is this and that&mdash;be sure to include why it’s great</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" value="option2" name="optionsRadios">
+                    <span>Option two is something else and selecting it will deselect option 1</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /clearfix -->
+          <div class="actions">
+            <input type="submit" value="Save changes" class="btn primary">&nbsp;<button class="btn" type="reset">Cancel</button>
+          </div>
+        </fieldset>
+
+<div class="clearfix string required">
+  <label for="user_name" class="string required  "><abbr title="required">*</abbr> 用户名</label>
+  <div class="input">
+    <input type="text" value="莫烦" size="50" name="user[name]" id="user_name" class="string required span5">
+  </div>
+</div>
+
+<div class="clearfix string email optional">
+  <label for="user_email" class="email optional  "> Email</label>
+  <div class="input">
+    <input type="text" value="cjdx4311@gmail.com" size="50" name="user[email]" id="user_email" class="string email optional ">
+  </div>
+</div>
+
+<div class="clearfix file optional">
+  <div class="input">
+    <textarea class="span10" cols="8" rows="8">内容</textarea>
+  </div>
+</div>
+
+<div class="clearfix file optional">
+  <label for="user_avatar" class="file optional  "> 头像</label>
+  <div class="input">
+    <input type="file" name="user[avatar]" id="user_avatar" class="file optional input_file">
+  </div>
+</div>
+
+<div class="actions">
+  <input type="submit" class="btn submit" value="登录" />
+  <a href="#" class="btn btn_2">返回</a>
+</div>
+</form>
+
+
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<form novalidate="novalidate" method="post" id="new_user" enctype="multipart/form-data" class="form-stacked simple_form new_user" action="/users" accept-charset="UTF-8">
+<div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="put" name="_method"><input type="hidden" value="sSVaqOyW/i8HkGwcy344rI2OM1tKFJvyfSlirsSO4Eo=" name="authenticity_token"></div>
+<fieldset>
+  <legend>注册信息</legend>
+<div class="clearfix string required  error">
+  <label for="user_name" class="string required  "><abbr title="required">*</abbr> 用户名</label>
+  <div class="input">
+    <input type="text" value="" size="50" name="user[name]" id="user_name" class="string required "><span class="help-inline">不能为空字符</span>
+  </div>
+</div>
+
+  <div class="clearfix string required">
+    <label for="user_name" class="string required  "><abbr title="required">*</abbr> 用户名</label>
+    <div class="input">
+      <input type="text" value="莫烦" size="50" name="user[name]" id="user_name" class="string required span5">
+      <span class="uneditable-input">Some value here</span>
+      <input type="text" disabled="" placeholder="Disabled input here… carry on." size="30" name="disabledInput" id="disabledInput" class="xlarge disabled">
+    </div>
+  </div>
+  <div class="clearfix string required">
+    <label for="user_name" class="string required  "><abbr title="required">*</abbr> 用户名</label>
+    <div class="input">
+      <input type="text" value="莫烦" size="50" name="user[name]" id="user_name" class="string required span5">
+    </div>
+  </div>
+</fieldset>
+
+<div class="clearfix string email optional">
+  <label for="user_email" class="email optional  "> Email</label>
+  <div class="input">
+    <input type="text" value="cjdx4311@gmail.com" size="50" name="user[email]" id="user_email" class="string email optional ">
+  </div>
+</div>
+
+<div class="clearfix file optional">
+  <div class="input">
+    <textarea>内容</textarea>
+  </div>
+</div>
+
+<div class="clearfix file optional">
+  <label for="user_avatar" class="file optional  "> 头像</label>
+  <div class="input">
+    <input type="file" name="user[avatar]" id="user_avatar" class="file optional input_file">
+  </div>
+</div>
+
+<div class="actions">
+  <input type="submit" class="btn submit" value="登录" />
+  <a href="#" class="btn btn_2">返回</a>
+</div>
+</form>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+<p>aaa</p>
+</div>
+</body>
+</html>
