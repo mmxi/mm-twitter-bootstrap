@@ -104,7 +104,7 @@
 <div class="clearfix string required  error">
   <label for="user_name" class="string required  "><abbr title="required">*</abbr> 用户名</label>
   <div class="input">
-    <input type="text" value="" size="50" name="user[name]" id="user_name" class="string required ">
+    <input type="text" value="" size="50" name="user[name]" id="user_name" class="string required input_text">
     <span class="help-inline">不能为空字符</span>
   </div>
 </div>
@@ -112,7 +112,7 @@
 <div class="clearfix string required  success">
   <label for="user_name" class="string required  "><abbr title="required">*</abbr> 用户名</label>
   <div class="input">
-    <input type="text" value="" size="50" name="user[name]" id="user_name" class="string required ">
+    <input type="text" value="" size="50" name="user[name]" id="user_name" class="string required input_text">
     <span class="help-inline">不能为空字符</span>
   </div>
 </div>
@@ -120,7 +120,7 @@
 <div class="clearfix success string required">
             <label><abbr title="required">*</abbr>只整合</label>
             <div class="input">
-              <input type="text" size="30" name="successInput" id="successInput" class="string required">
+              <input type="text" size="30" name="successInput" id="successInput" class="string required input_text">
               <span class="help-inline">Success!</span>
             </div>
         </div>
@@ -128,7 +128,7 @@
 <div class="clearfix warning">
             <label for="warningInput">Input with warning</label>
             <div class="input">
-              <input type="text" size="30" name="warningInput" id="warningInput" class="">
+              <input type="text" size="30" name="warningInput" id="warningInput" class="input_text">
               <span class="help-inline">Ruh roh!</span>
             </div>
           </div>
@@ -173,7 +173,7 @@
             <label>Date range</label>
             <div class="input">
               <div class="inline-inputs">
-                <input type="text" value="May 1, 2011" class="small">
+                <input type="text" value="May 1, 2011" class="small input_text">
                 <input type="text" value="12:00am" class="mini">
                 to
                 <input type="text" value="May 8, 2011" class="small">
@@ -306,10 +306,46 @@
 </div>
 </form>
 <p>aaa</p>
+<ul class="breadcrumb">
+        <li><a href="#">Home</a> <span class="divider">/</span></li>
+        <li><a href="#">Middle page</a> <span class="divider">/</span></li>
+        <li class="active">Another one</li>
+</ul>
+<p>aaa</p>
+<ul class="breadcrumb">
+        <a href="#">Home</a> <span class="divider">/</span>
+        <a href="#">Middle page</a> <span class="divider">/</span>
+        Another one
+</ul>
+<p>aaa</p>
+<form novalidate="novalidate" method="post" id="user_new" class="simple_form new_user" action="/users/sign_in" accept-charset="UTF-8"><div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="yo46D4JZXUe9LGPyGRFd3qvr1B2bYHY5W/MX1mmlLAk=" name="authenticity_token"></div>
+<div class="clearfix string email optional">
+<label for="user_email" class="email optional  "> Email</label>
+<div class="input">
+<input type="text" value="" size="50" name="user[email]" id="user_email" class="string email optional input_text">
+</div></div>
+<div class="clearfix password optional"><label for="user_password" class="password optional "> 密码</label><div class="input"><input type="password" size="50" name="user[password]" id="user_password" class="password optional input_text"></div></div>
+<div class="clearfix string optional"><div class="input"><div class="inputs-list" style="padding:0;">
+<input type="checkbox" value="1" name="remember_me" id="remember_me" class="input_checkbox">
+<label for="remember_me">
+记住我
+</label></div></div></div><div class="actions">
+<button type="submit" name="button" class="primary btn">登录</button>
+</div>
+</form>
+
 <p>aaa</p>
 <p>aaa</p>
-<p>aaa</p>
-<p>aaa</p>
+<form novalidate="novalidate" method="post" id="user_new" class="simple_form new_user" action="/users/sign_in" accept-charset="UTF-8"><div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="yo46D4JZXUe9LGPyGRFd3qvr1B2bYHY5W/MX1mmlLAk=" name="authenticity_token"></div>
+<div class="clearfix string email optional"><label for="user_email" class="email optional  "> Email</label><div class="input"><input type="text" value="" size="50" name="user[email]" id="user_email" class="string email optional "></div></div>
+<div class="clearfix password optional"><label for="user_password" class="password optional  "> 密码</label><div class="input"><input type="password" size="50" name="user[password]" id="user_password" class="password optional "></div></div>
+<div class="clearfix string optional"><div class="input"><div class="inputs-list"><label><input type="checkbox" value="1" name="remember_me" id="remember_me" class="input_checkbox">
+记住我
+</label></div></div></div><div class="actions">
+<button type="submit" name="button" class="primary btn">登录</button>
+</div>
+</form>
+
 <p>aaa</p>
 <p>aaa</p>
 <p>aaa</p>

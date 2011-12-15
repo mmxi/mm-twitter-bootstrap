@@ -6,6 +6,7 @@
   _position: absolute;
   _top: expression(documentElement.scrollTop + 0 + "px");
   top: 0; left: 0; right: 0;  
+  z-index: 2;
   .topbar-inner, .fill {
     @include topbar-sprite(topbar_bg);
     background-repeat: repeat-x;
