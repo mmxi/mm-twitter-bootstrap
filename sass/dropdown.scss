@@ -30,7 +30,7 @@ li.menu, .dropdown { position: relative;
   float: left;
   margin-left: 0;
   margin-right: 0;
-  @include min-width(160px);
+  @include min-width(90px);
   padding: 6px 0;
   position: absolute;
   top: 40px;
@@ -58,6 +58,7 @@ li.menu, .dropdown { position: relative;
       color: #999;
       font-size: 14px;
       padding: 4px 15px;
+			white-space:nowrap;
       &:hover { background: #191919; }
     }
   }

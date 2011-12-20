@@ -17,12 +17,17 @@ a {
 }
 
 li {
-    color: #808080;
-    line-height: 18px;
+	color: #808080;
+	line-height: 18px;
 }
 
-button, input[type="reset"], input[type="button"], input[type="submit"], input[type="file"] > input[type="button"] { &::-moz-focus-inner { border:none; } }
+button, input[type="reset"], 
+input[type="button"], 
+input[type="submit"], 
+input[type="file"] > input[type="button"] { &::-moz-focus-inner { border:none; } }
+
 article, aside, div, form, header, nav, section, ul{
   &:after { clear: both; content: ""; display: block; height: 0; visibility: hidden; }
 }
+
 .container { @include grid-system(16); }

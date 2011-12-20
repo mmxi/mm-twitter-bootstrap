@@ -1,9 +1,17 @@
 @import "compass/css3";
 
-fieldset { margin-bottom: 18px; padding-top: 18px; }
-fieldset legend { color: #404040; display: block; font-size: 20px; line-height: 1; padding-left: 150px;
-  *padding: 0 0 5px 145px;
-  *line-height: 1.5;
+fieldset {
+	margin-bottom: 18px;
+	padding-top: 18px;
+	legend {
+		color: #404040;
+		display: block;
+		font-size: 20px;
+		line-height: 1;
+		padding-left: 150px;
+		*padding: 0 0 5px 145px;
+		*line-height: 1.5;
+	}
 }
 
 .actions {
@@ -16,13 +24,17 @@ fieldset legend { color: #404040; display: block; font-size: 20px; line-height: 
   input, .btn, .submit { float: left; margin-right: 5px; }
 }
 
-form { margin-bottom: 18px; 
-  .clearfix { clear: both; margin-bottom: 18px; 
+form {
+	margin-bottom: 18px; 
+	.clearfix {
+		clear: both;
+		margin-bottom: 18px; 
     .help-inline { padding-left: 5px;
       *position: relative;
       *top: -5px;
       z-index: -1;
     }
+		
     .help-inline, .help-block { color: #BFBFBF; font-size: 13px; line-height: 18px; }
     &.error label, &.error .help-inline, &.error .help-block { color: #B94A48; }
     &.error .input_text, &.error textarea{ border-color: #EE5F5B;color: #B94A48;
@@ -50,56 +62,44 @@ form { margin-bottom: 18px;
   .input { margin-left: 150px; }  
 }
 
-.form-stacked { padding-left: 20px;
-  legend { padding-left: 0px; }
+.form-stacked {
+	padding-left: 20px;
+	legend { padding-left: 0px; }
   .actions { position: relative; margin-left: -20px; padding-left: 20px; *padding-left: 40px; }
   fieldset { padding-top: 9px; }
   label { display: block; float: none; width: auto; font-weight: bold; text-align: left; line-height: 20px; padding-top: 0; }
-  .clearfix { margin-bottom: 9px;
+  .clearfix {
+		margin-bottom: 9px;
     div.input { margin-left: 0; }
   }
 }
 
 label {
-    color: #404040;
-    float: left;
-    font-size: 13px;
-    line-height: 18px;
-    padding-top: 6px;
-    text-align: right;
-    width: 130px;
+	color: #404040;
+	float: left;
+	font-size: 13px;
+	line-height: 18px;
+	padding-top: 6px;
+	text-align: right;
+	width: 130px;
 }
-.input_text, textarea, select, .uneditable-input {
-    display: inline-block;
-    width: 210px;
-    height: 18px;
-    line-height: 18px;
-    margin: 0;
-    padding: 4px;
-    color: #808080;
-    font-size: 13px;
-    border: 1px solid #ccc;
-    @include border-radius(3px);
-    &.span { display: inline-block; float: none; margin-left: 0; }
-    &.span1 { @extend .span; width: 30px; }
-    &.span2 { @extend .span; width: 90px; }
-    &.span3 { @extend .span; width: 150px; }
-    &.span4 { @extend .span; width: 210px; }
-    &.span5 { @extend .span; width: 270px; }
-    &.span6 { @extend .span; width: 330px; }
-    &.span7 { @extend .span; width: 390px; }
-    &.span8 { @extend .span; width: 450px; }
-    &.span9 { @extend .span; width: 510px; }
-    &.span10 { @extend .span; width: 570px; }
-    &.span11 { @extend .span; width: 630px; }
-    &.span12 { @extend .span; width: 690px; }
-    &.span13 { @extend .span; width: 750px; }
-    &.span14 { @extend .span; width: 810px; }
-    &.span15 { @extend .span; width: 870px; }
-    &.span16 { @extend .span; width: 930px; }
+
+.input_text, select {
+	display: inline-block;
+	width: 210px;
+	height: 18px;
+	line-height: 18px;
+	margin: 0;
+	padding: 4px;
+	color: #808080;
+	resize: none;
+	font-size: 13px;
+	border: 1px solid #ccc;
+	@include border-radius(3px);
 }
 
 .uneditable-input {
+	@extend .input_text;
   display: block;
   border-color: #eee;
   cursor: not-allowed;
@@ -107,14 +107,18 @@ label {
   @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.025));
 }
 
-input.disabled{
-  background-color: #f5f5f5;
-  border-color: #ddd;
-  cursor: not-allowed;
+textarea { 
+	@extend .input_text;
+	height: auto;
+}
+
+.input_file {
+  @extend .input_text;
+  background-color: #ffffff;
+  @include box-shadow(none);
 }
 
 .input_text, textarea {
-  resize: none;
   @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.1) inset);
   &:focus, &.ieFocus {
     outline: none;
@@ -124,11 +128,35 @@ input.disabled{
   }
 }
 
-textarea { height: auto; }
-.input_file {
-  @extend .input_text;
-  background-color: #ffffff;
-  @include box-shadow(none);
+.span {
+	display: inline-block;
+	float: none;
+	margin-left: 0;
+	margin-right:10px;
+}
+
+input {
+	&.span1 { @extend .span; width: 30px; }
+	&.span2 { @extend .span; width: 90px; }
+	&.span3 { @extend .span; width: 150px; }
+	&.span4 { @extend .span; width: 210px; }
+	&.span5 { @extend .span; width: 270px; }
+	&.span6 { @extend .span; width: 330px; }
+	&.span7 { @extend .span; width: 390px; }
+	&.span8 { @extend .span; width: 450px; }
+	&.span9 { @extend .span; width: 510px; }
+	&.span10 { @extend .span; width: 570px; }
+	&.span11 { @extend .span; width: 630px; }
+	&.span12 { @extend .span; width: 690px; }
+	&.span13 { @extend .span; width: 750px; }
+	&.span14 { @extend .span; width: 810px; }
+	&.span15 { @extend .span; width: 870px; }
+	&.span16 { @extend .span; width: 930px; }
+	.disabled{
+		background-color: #f5f5f5;
+		border-color: #ddd;
+		cursor: not-allowed;
+	}
 }
 
 .input_checkbox, .input_radio {
@@ -142,7 +170,10 @@ textarea { height: auto; }
 
 select, .input_file { height: 27px; }
 
-.inputs-list { padding-top: 6px; margin-bottom: 5px;
+.inputs-list {
+	padding-top:6px;
+	margin-bottom: 5px;
+	zoom:1;
   label {
     float: none;
     line-height: normal;
@@ -155,12 +186,10 @@ select, .input_file { height: 27px; }
   }
   li {
     display: block;
-    padding: 0;
     width: 100%;
   }
   .input_checkbox, .input_radio {
     margin: 0;
     vertical-align:middle;
-    //border: none medium #000;
   }
 }
